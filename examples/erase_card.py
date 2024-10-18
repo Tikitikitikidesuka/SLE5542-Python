@@ -1,6 +1,7 @@
 from smartcard.System import readers
 
-from SLE5542 import SLE5542
+from sle5542 import SLE5542
+
 
 def main():
     try:
@@ -15,6 +16,7 @@ def main():
             data, ok = card.write(address, 0x10, bytes([0x00] * 0x10))
     except Exception as e:
         print(f"Error reading card: {e}")
+
 
 if __name__ == "__main__":
     main()
